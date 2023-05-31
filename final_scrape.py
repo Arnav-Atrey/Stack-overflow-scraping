@@ -14,7 +14,7 @@ def make_file(URL,x):
     for i in question:
         if i.name in ['p', 'pre']:
             data.append(i.get_text().strip().replace('\n','')) #needs work 
-    total=SOUP.find_all('div',"js-vote-count flex--item d-flex fd-column ai-center fc-black-500 fs-title")
+    total=SOUP.find_all('div',"js-vote-count flex--item d-flex fd-column ai-center fc-theme-body-font fw-bold fs-subheading py4")
     y=int(total[0].get_text())
     data.append('TOTAL NO OF UPVOTES: ')
     data.append(y)
